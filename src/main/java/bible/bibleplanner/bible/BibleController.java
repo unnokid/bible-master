@@ -1,2 +1,4 @@
-package bible.bibleplanner.bible;public class BibleController {
+package bible.bibleplanner.bible;
+
+public class BibleController {
 }
