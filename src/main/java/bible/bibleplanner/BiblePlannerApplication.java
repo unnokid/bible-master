@@ -1,13 +1,13 @@
-package bible.bibleplaner;
+package bible.bibleplanner;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BiblePlanerApplication {
+public class BiblePlannerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BiblePlanerApplication.class, args);
+		SpringApplication.run(BiblePlannerApplication.class, args);
 	}
 
 }
