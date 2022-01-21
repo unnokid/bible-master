@@ -1,4 +1,4 @@
-package bible.bibleplaner.home;
+package bible.bibleplanner.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
