@@ -1,17 +1,28 @@
 package bible.bibleplanner.bible;
 
-public class Bible {
-    private Long book;
-    private Long chapter;
-    private Long verse;
-    private String content;
+import javax.persistence.*;
 
-    public Long getBook() {
-        return book;
-    }
+
+@Entity
+@IdClass(BibleID.class)
+@Table(name="bible_korhrv")
+public class Bible {
+
+    @Id
+    private Long book;
+    @Id
+    private Long chapter;
+    @Id
+    private Long verse;
+
+    private String content;
 
     public void setBook(Long book) {
         this.book = book;
+    }
+
+    public Long getBook() {
+        return book;
     }
 
     public Long getChapter() {
