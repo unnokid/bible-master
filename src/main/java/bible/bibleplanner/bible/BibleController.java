@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -25,4 +26,17 @@ public class BibleController {
         model.addAttribute("bibles",bibles);
         return "list";
     }
+
+    @GetMapping("/search")
+    public String search(){
+        return "search";
+    }
+
+    @RequestMapping("/searchbibles")
+    public String searchlist(Model model){
+        List<Bible> searchbibles = bibleService.searchBibles();
+        model.addAttribute("bibles",searchbibles);
+        return "list";
+    }
+
 }
