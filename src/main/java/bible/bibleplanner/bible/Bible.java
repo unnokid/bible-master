@@ -9,35 +9,35 @@ import javax.persistence.*;
 public class Bible {
 
     @Id
-    private Long book;
+    private int book;
     @Id
-    private Long chapter;
+    private int chapter;
     @Id
-    private Long verse;
+    private int verse;
 
     private String content;
 
-    public void setBook(Long book) {
+    public void setBook(int book) {
         this.book = book;
     }
 
-    public Long getBook() {
+    public int getBook() {
         return book;
     }
 
-    public Long getChapter() {
+    public int getChapter() {
         return chapter;
     }
 
-    public void setChapter(Long chapter) {
+    public void setChapter(int chapter) {
         this.chapter = chapter;
     }
 
-    public Long getVerse() {
+    public int getVerse() {
         return verse;
     }
 
-    public void setVerse(Long verse) {
+    public void setVerse(int verse) {
         this.verse = verse;
     }
 
