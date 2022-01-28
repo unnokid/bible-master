@@ -23,7 +23,9 @@ public class BibleController {
     @GetMapping("/bibles")
     public String list(Model model){
         List<Bible> bibles = bibleService.findBibles();
+        BibleTitle[] values = BibleTitle.values();
         model.addAttribute("bibles",bibles);
+        model.addAttribute("bibleTitle",values);
         return "list";
     }
 
@@ -36,6 +38,7 @@ public class BibleController {
     public String searchlist(Model model){
         List<Bible> searchbibles = bibleService.searchBibles();
         model.addAttribute("bibles",searchbibles);
+
         return "list";
     }
 
