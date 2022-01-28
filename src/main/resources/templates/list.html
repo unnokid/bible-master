@@ -7,15 +7,15 @@
         <table>
             <thead>
             <tr>
-                <th>#</th>
-                <th>성경 전체 리스트</th>
+                <th width="150">성경 전체 리스트</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="bible : ${bibles}">
-                <td th:text="${bible.book}"></td>
-                <td th:text="${bible.chapter}"></td>
-                <td th:text="${bible.verse}"></td>
+
+                <td width="120" th:text="${bibleTitle[bible.book-1]}"></td>
+                <td width="50"th:text="${bible.chapter}+장"></td>
+                <td width="50"th:text="${bible.verse}+절"></td>
                 <td th:text="${bible.content}"></td>
             </tr>
             </tbody>
