@@ -7,13 +7,13 @@ import java.util.Objects;
 
 public class BibleID implements Serializable {
 
-    private Long book;
-    private Long chapter;
-    private Long verse;
+    private int book;
+    private int chapter;
+    private int verse;
 
     public BibleID() {}
 
-    public BibleID(Long book, Long chapter, Long verse) {
+    public BibleID(int book, int chapter, int verse) {
         this.book = book;
         this.chapter = chapter;
         this.verse = verse;
@@ -28,8 +28,8 @@ public class BibleID implements Serializable {
             return false;
         }
         BibleID bibleID = (BibleID) o;
-        return book.equals(bibleID.book) && chapter.equals(bibleID.chapter)
-                && verse.equals(bibleID.verse);
+        return book == bibleID.book && chapter == bibleID.chapter
+                && verse == bibleID.verse;
     }
 
     @Override
